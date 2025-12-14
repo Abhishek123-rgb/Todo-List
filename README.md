@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# TODO LIST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple task manager built with React and Create React App.  
+Tasks are stored in `localStorage` under the key `todo.items.v1`, so they survive page refresh and browser restarts
 
-## Available Scripts
+The UI is split into two sections:
 
-In the project directory, you can run:
+- Left: list of tasks in reverse chronological order (newest at the top) 
+- Right: detail panel to create, edit, delete, and mark tasks as done.
 
-### `npm start`
+# Functional overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Add task
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Title is required, non‑empty, with a maximum length of 120 characters.​
 
-### `npm test`
+Description is optional, with a maximum length of 1000 characters.​
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Edit task
 
-### `npm run build`
+Update both title and description for any existing task.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Mark as done / undone
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Toggle completion using a checkbox in the task list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Delete task
 
-### `npm run eject`
+Remove the currently selected task from the list.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ordering
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tasks are stored and rendered in reverse chronological order, with the newest task at the top.​
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Persistence
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All tasks are stored in localStorage under a single key: todo.items.v1, ensuring the task list survives page refresh.​
 
-## Learn More
+Feedback
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+On creating a new task, a modal displays “Task created”.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+On updating an existing task, a modal displays “Changes saved”.
 
-### Code Splitting
+# Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Node.js 14 or higher
 
-### Analyzing the Bundle Size
+npm (bundled with Node.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Installation
 
-### Making a Progressive Web App
+git clone https://github.com/Abhishek123-rgb/Todo-List.git
+cd Todo-List
+git checkout main
+npm install
+All code is on the main branch, so make sure you are on that branch before running the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Development server
 
-### Advanced Configuration
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This starts the development server at http://localhost:3000. The page reloads automatically when you change the code
 
-### Deployment
+# Notes and possible improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Automated tests are not yet implemented for this project; the focus is on fulfilling the   functional and non‑functional requirements of the offline coding challenge, including clean component structure and local persistence.​
 
-### `npm run build` fails to minify
+2. The styling is intentionally minimal and can be extended with a design system or component library if needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. The current layout targets desktop resolution; responsive refinements for smaller viewports can be added as a next step.
+
+
+
