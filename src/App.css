@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left {
+  flex: 1;
+  padding: 24px 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.today {
+  font-size: 32px;
+  margin: 0 0 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.plus {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #777;
+}
+
+.right {
+  width: 360px;
+  background: #f1f1f1;
+  border-radius: 24px 0 0 24px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.detail-inner {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.title-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.desc-input {
+  width: 100%;
+  height: 60%;
+  border: none;
+  resize: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #d9534f;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save-btn {
+  border: none;
+  background: #f3b000;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  min-width: 260px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
 }
+
+.modal p {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.modal button {
+  border: none;
+  background: #f3b000;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
